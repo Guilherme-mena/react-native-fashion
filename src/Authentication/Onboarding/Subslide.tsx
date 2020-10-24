@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from '../../components';
-import Animated from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    padding: 44,
+    padding: 44,   
   },
   subtitle: {
     fontFamily: "SFProText-Semibold",
