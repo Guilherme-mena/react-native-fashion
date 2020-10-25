@@ -12,11 +12,6 @@ const styles = StyleSheet.create({
     width: 245,
     justifyContent: "center",
     alignItems: "center",
-  },
-  label: {
-    fontFamily: "SFProText-Regular",
-    fontSize: 15,
-    textAlign: "center"
   }
 })
 
@@ -35,7 +30,7 @@ const Button = ({variant, label, onPress }: ButtonProps) => {
       style={[styles.container, {backgroundColor}]}
       {...{ onPress }}
     >    
-        <Text style={[styles.label, { color }]}>{label}</Text>    
+        <Text variant="button" style={{ color }}>{label}</Text>    
     </RectButton>
   )
 }

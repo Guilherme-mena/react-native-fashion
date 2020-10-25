@@ -18,30 +18,30 @@ const theme = {
     hero: {
       fontSize: 80,
       lineHeight: 80,
-      fontFamily: "SFProText-Bold",
+      fontFamily: "SFProDisplay-Bold",
       color: "white",
       textAlign: "center"
     },
     title1: {
       fontSize: 28,
-      fontFamily: "SFProText-SemiBold",
+      fontFamily: "SFProDisplay-SemiBold",
       color: "title",
     },
     title2: {
       fontSize: 24,
       lineHeight: 30,
-      fontFamily: "SFProText-SemiBold",
+      fontFamily: "SFProDisplay-SemiBold",
       color: "title",
     },
     body: {
       fontSize: 16,
       lineHeight: 24,
-      fontFamily: "SFProText-Regular",
+      fontFamily: "SFProDisplay-Regular",
       color: "text",
     },
     button: {
       fontSize: 15,
-      fontFamily: "SFProText-Medium>",
+      fontFamily: "SFProDisplay-Medium>",
       color: "text"
     }
   },
