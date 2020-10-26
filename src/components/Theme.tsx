@@ -24,13 +24,13 @@ const theme = {
     },
     title1: {
       fontSize: 28,
-      fontFamily: "SFProDisplay-SemiBold",
+      fontFamily: "SFProDisplay-Semibold",
       color: "title",
     },
     title2: {
       fontSize: 24,
       lineHeight: 30,
-      fontFamily: "SFProDisplay-SemiBold",
+      fontFamily: "SFProDisplay-Semibold",
       color: "title",
     },
     body: {
@@ -41,7 +41,7 @@ const theme = {
     },
     button: {
       fontSize: 15,
-      fontFamily: "SFProDisplay-Medium>",
+      fontFamily: "SFProDisplay-Medium",
       color: "text"
     }
   },

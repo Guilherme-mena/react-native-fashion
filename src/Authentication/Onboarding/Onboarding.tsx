@@ -1,5 +1,5 @@
 import React, {useRef} from "react";
-import { Dimensions, StyleSheet, View } from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
 import Animated, { divide, multiply, } from "react-native-reanimated";
 import { interpolateColor, useValue, onScrollEvent, useScrollHandler } from "react-native-redash";
 
@@ -17,6 +17,11 @@ const styles = StyleSheet.create({
     height: SLIDE_HEIGHT,
     backgroundColor: "cyan",
     borderBottomRightRadius: BORDER_RADIUS,
+  },
+  underlay: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "flex-end",
   },
   footer: {
     flex: 1
@@ -42,7 +47,11 @@ const slides = [
     description:
       "Confused about your outfit? Don’t worry! Find the best outfit here!",
     color: "#BFEAF5",
-    picture:  require("../assets/1.png")
+    picture: {
+      src: require("../assets/1.png"),
+      width: 2513,
+      height: 3583,
+    },
   },
   {
     title: "Playful",
@@ -50,7 +59,11 @@ const slides = [
     description:
       "Hating the clothes in your wardrobe? Explore hundreds of outfit ideas",
     color: "#BEECC4",
-    picture: require("../assets/2.png")
+    picture: {
+      src: require("../assets/2.png"),
+      width: 2791,
+      height: 3744,
+    },
   },
   {
     title: "Excentric",
@@ -58,7 +71,11 @@ const slides = [
     description:
       " Create your individual & unique style and look amazing everyday",
     color: "#FFE4D9",
-    picture: require("../assets/3.png"), 
+    picture: {
+      src: require("../assets/3.png"),
+      width: 2738,
+      height: 3244,
+    },
   },
   {
     title: "Funky",
@@ -66,7 +83,11 @@ const slides = [
     description:
       "Discover the latest trends in fashion and explore your personality",
     color: "#FFDDDD",
-    picture: require("../assets/4.png")
+    picture: {
+      src: require("../assets/4.png"),
+      width: 1757,
+      height: 2551,
+    },
   },
 ]
 
@@ -80,6 +101,15 @@ const Onboarding = () => {
   return (
     <View style={styles.container}>
       <Animated.View style={[styles.slider, { backgroundColor }]}>
+        {slides.map(({picture}, index) => {
+          return (<View style={styles.underlay} key={index}>
+            <Image source={picture.src} style={{         
+              width: width - BORDER_RADIUS ,
+              height: ((width - BORDER_RADIUS ) * picture.height) / picture.width
+              }} />
+          </View>);
+        })}
+      
         <Animated.ScrollView 
           ref={scroll}
           horizontal
